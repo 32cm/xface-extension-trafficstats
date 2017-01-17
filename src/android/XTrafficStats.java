@@ -38,7 +38,6 @@ import android.net.TrafficStats;
  */
 public class XTrafficStats {
 
-    private static final int CONST_NUM = 1024;
     private Context mContext;
     /** 应用的唯一标识 */
     private int mUID;
@@ -164,7 +163,7 @@ public class XTrafficStats {
      */
     public long getWifiTraffic() {
         mCurrentNetworkState.updateTraffic();
-        return mWifiTraffic.getTraffic() / CONST_NUM;
+        return mWifiTraffic.getTraffic();
     }
 
     /**
@@ -174,7 +173,7 @@ public class XTrafficStats {
      */
     public long getMobileTraffic() {
         mCurrentNetworkState.updateTraffic();
-        return mMobileTraffic.getTraffic() / CONST_NUM;
+        return mMobileTraffic.getTraffic();
     }
 
     /**
